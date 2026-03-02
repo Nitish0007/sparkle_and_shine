@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { FloatingCallButton } from "@/components/layout/FloatingCallButton";
 import { config } from "@/lib/data";
 
 const inter = Inter({
@@ -60,6 +61,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
+        <FloatingCallButton />
       </body>
     </html>
   );

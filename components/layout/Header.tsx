@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { config } from "@/lib/data";
 import { Icon } from "@/components/ui/Icon";
+import Image from "next/image";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,10 +24,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-              <Icon name="Sparkle01" size={24} />
-            </div>
-            <span className="text-xl font-bold">{config.site.name}</span>
+            <Image src="/assets/logo.png" alt={config.site.name} width={160} height={160} className="h-14 w-auto max-h-16 object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -47,13 +45,12 @@ export function Header() {
             <Button asChild>
               <Link href="/get-a-quote">Get a Free Quote</Link>
             </Button>
-            <a
-              href={`tel:${config.site.phone}`}
-              className="flex items-center space-x-2 text-sm font-medium text-primary hover:underline"
-            >
-              <Icon name="PhoneCalling01" size={20} />
-              <span>{config.site.phone}</span>
-            </a>
+            <Button asChild variant="outline">
+              <a href={`tel:${config.site.phone}`} className="flex items-center space-x-2">
+                <Icon name="PhoneCalling01" size={18} />
+                <span>Call Now</span>
+              </a>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,13 +81,12 @@ export function Header() {
                 Get a Free Quote
               </Link>
             </Button>
-            <a
-              href={`tel:${config.site.phone}`}
-              className="flex items-center space-x-2 text-sm font-medium text-primary"
-            >
-              <Icon name="PhoneCalling01" size={20} />
-              <span>{config.site.phone}</span>
-            </a>
+            <Button asChild variant="outline" className="w-full">
+              <a href={`tel:${config.site.phone}`} className="flex items-center justify-center space-x-2">
+                <Icon name="PhoneCalling01" size={18} />
+                <span>Call Now</span>
+              </a>
+            </Button>
           </nav>
         )}
       </div>
