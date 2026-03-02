@@ -72,6 +72,7 @@ export default function GetAQuotePage() {
       <Hero
         title="Get a Free Quote"
         description="Fill out the form below and we'll get back to you with a personalized quote for your cleaning needs."
+        hideButtons={true}
       />
 
       <section className="py-20">
@@ -271,7 +272,7 @@ export default function GetAQuotePage() {
                 <CardContent>
                   <a
                     href={`mailto:${config.site.email}`}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground hover:text-foreground transition-colors break-all"
                   >
                     {config.site.email}
                   </a>
