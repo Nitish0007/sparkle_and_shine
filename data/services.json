@@ -1,0 +1,142 @@
+{
+  "services": [
+    {
+      "id": "bond-cleaning",
+      "title": "Bond Cleaning",
+      "description": "Leave your rental spotless and stress-free! Our bond cleaning service ensures every corner shines, helping you secure your bond refund with ease.",
+      "icon": "shield-check",
+      "features": [
+        "REIQ-approved cleaning checklist",
+        "Free re-clean within 72 hours if needed",
+        "All equipment and cleaning supplies included",
+        "7-day service availability"
+      ]
+    },
+    {
+      "id": "exit-cleaning",
+      "title": "Exit Cleaning",
+      "description": "Our expert team delivers a complete exit cleaning package — perfect for tenants and landlords who want a property that looks brand new again.",
+      "icon": "door-exit",
+      "features": [
+        "Deep cleaning of all surfaces",
+        "Appliance cleaning included",
+        "Window and glass cleaning",
+        "Bond return guarantee"
+      ]
+    },
+    {
+      "id": "end-of-lease-cleaning",
+      "title": "End-of-Lease Cleaning",
+      "description": "We deep-clean every surface, skirting, and appliance to meet strict landlord and agent standards — ensuring a smooth, successful end-of-lease inspection.",
+      "icon": "document-check",
+      "features": [
+        "Comprehensive property inspection",
+        "Professional-grade equipment",
+        "Eco-friendly cleaning products",
+        "Satisfaction guarantee"
+      ]
+    },
+    {
+      "id": "move-in-move-out-cleaning",
+      "title": "Move-In / Move-Out Cleaning",
+      "description": "Whether you're arriving or leaving, we ensure your home is perfectly sanitized, fresh, and move-in ready.",
+      "icon": "truck",
+      "features": [
+        "Sanitization included",
+        "Fresh and ready for new tenants",
+        "Flexible scheduling",
+        "Complete property preparation"
+      ]
+    },
+    {
+      "id": "carpet-cleaning",
+      "title": "Carpet Cleaning",
+      "description": "Revive your carpets with our professional steam carpet cleaning service. We remove stains, dust, and allergens for a cleaner, fresher, and healthier home.",
+      "icon": "carpet",
+      "features": [
+        "Steam cleaning technology",
+        "Stain removal",
+        "Allergen elimination",
+        "Odor neutralization"
+      ]
+    },
+    {
+      "id": "vacate-cleaning",
+      "title": "Vacate Cleaning",
+      "description": "Moving out soon? Our vacate cleaning service guarantees a spotless finish, making your handover process simple and stress-free.",
+      "icon": "home-check",
+      "features": [
+        "Complete property clean",
+        "Handover ready",
+        "Bond back guarantee",
+        "Professional team"
+      ]
+    },
+    {
+      "id": "pest-control",
+      "title": "Pest Control",
+      "description": "We provide safe and eco-friendly pest control treatments that eliminate insects and rodents effectively — ideal for end-of-lease or regular maintenance.",
+      "icon": "bug",
+      "features": [
+        "Eco-friendly solutions",
+        "Safe for pets and children",
+        "Effective treatment",
+        "Prevention strategies"
+      ]
+    },
+    {
+      "id": "house-regular-cleaning",
+      "title": "House / Regular Cleaning",
+      "description": "Keep your home consistently clean with our house cleaning service. Choose weekly, fortnightly, or monthly visits for a spotless home year-round.",
+      "icon": "home",
+      "features": [
+        "Flexible scheduling",
+        "Customizable cleaning plans",
+        "Regular maintenance",
+        "Consistent quality"
+      ]
+    }
+  ],
+  "areas": [
+    "Annerley",
+    "New Farm",
+    "Fortitude Valley",
+    "Toowong",
+    "Kangaroo Point",
+    "St. Lucia",
+    "Redcliffe",
+    "Caboolture",
+    "Marsden",
+    "Crestmead",
+    "Albion",
+    "Indooroopilly",
+    "Nundah",
+    "Paddington",
+    "Morningside",
+    "Brendale",
+    "Chermside",
+    "Doolandella",
+    "Loganholme",
+    "Kingston",
+    "Mitchelton",
+    "Mango Hill",
+    "Bray Park",
+    "Hamilton",
+    "North Lakes",
+    "Upper Kedron",
+    "East Brisbane",
+    "Greenslopes",
+    "Bethania",
+    "Beenleigh",
+    "Kelvin Grove",
+    "Newstead",
+    "Taringa",
+    "Woolloongabba",
+    "Coorparoo",
+    "Aspley",
+    "Zillmere",
+    "Logan Reserve",
+    "Park Ridge",
+    "Browns Plains"
+  ]
+}

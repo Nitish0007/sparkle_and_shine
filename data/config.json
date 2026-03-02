@@ -1,0 +1,60 @@
+{
+  "site": {
+    "name": "Sparkle & Shine",
+    "tagline": "Professional Cleaning Services",
+    "description": "Professional cleaning services for your home and office. Bond cleaning, exit cleaning, carpet cleaning, and more.",
+    "phone": "+61 416255040",
+    "email": "info@sparkleandshine.com.au",
+    "address": "49 Winifred Street, Kuraby, Qld 4112",
+    "workingHours": "24 X 7"
+  },
+  "socialMedia": [
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/sparkleandshine",
+      "icon": "facebook"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/sparkleandshine",
+      "icon": "instagram"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/sparkleandshine",
+      "icon": "twitter"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://youtube.com/sparkleandshine",
+      "icon": "youtube"
+    }
+  ],
+  "features": [
+    {
+      "title": "Skilled & Trusted Cleaners",
+      "description": "Our team is fully trained, insured, and committed to delivering spotless results with precision and professionalism.",
+      "icon": "users-check"
+    },
+    {
+      "title": "Honest & Transparent Pricing",
+      "description": "No hidden fees, no surprises. We provide upfront, affordable quotes so you know exactly what you're paying for.",
+      "icon": "dollar-circle"
+    },
+    {
+      "title": "Modern Tools & Proven Techniques",
+      "description": "We use industry-grade equipment and smart cleaning methods to achieve faster, deeper, and longer-lasting results.",
+      "icon": "tools"
+    },
+    {
+      "title": "Vetted & Background Checked Cleaners",
+      "description": "Our cleaners go through a rigorous hiring process to make sure your home is in safe hands.",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Quick & Easy Booking",
+      "description": "Getting your property cleaned is hassle-free. Just call, message, or book online — our friendly team will handle everything else.",
+      "icon": "calendar-check"
+    }
+  ]
+}
