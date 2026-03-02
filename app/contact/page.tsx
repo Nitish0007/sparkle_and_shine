@@ -11,6 +11,7 @@ import { config } from "@/lib/data";
 import { Icon } from "@/components/ui/Icon";
 import { saveContactSubmission } from "@/lib/form-submissions";
 
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
