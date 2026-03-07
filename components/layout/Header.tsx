@@ -23,8 +23,9 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-3">
             <Image src="/assets/logo.png" alt={config.site.name} width={160} height={160} className="h-14 w-auto max-h-16 object-contain" />
+            <span className="text-xl font-semibold text-foreground hidden sm:block">{config.site.name}</span>
           </Link>
 
           {/* Desktop Navigation */}

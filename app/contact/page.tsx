@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Hero } from "@/components/ui/Hero";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -61,6 +62,21 @@ export default function ContactPage() {
         description="Get in touch with us. We're here to help with all your cleaning needs."
       />
 
+      {/* Contact Image */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="relative w-full h-[450px] md:h-[600px] rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/assets/vacate_cleaning.png"
+              alt="Contact us - Professional cleaning services"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -75,7 +91,7 @@ export default function ContactPage() {
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
+                    <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>
                       <Input
                         id="name"
@@ -87,7 +103,7 @@ export default function ContactPage() {
                         placeholder="John Doe"
                       />
                     </div>
-                    <div>
+                    <div className="space-y-2">
                       <Label htmlFor="email">Email Address *</Label>
                       <Input
                         id="email"
@@ -101,7 +117,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div>
+                  <div className="space-y-2">
                     <Label htmlFor="phone">Phone Number</Label>
                     <Input
                       id="phone"
@@ -113,7 +129,7 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <div>
+                  <div className="space-y-2">
                     <Label htmlFor="subject">Subject *</Label>
                     <Input
                       id="subject"
@@ -126,7 +142,7 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <div>
+                  <div className="space-y-2">
                     <Label htmlFor="message">Message *</Label>
                     <Textarea
                       id="message"
@@ -232,10 +248,6 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
-                    <li className="flex items-start space-x-2">
-                      <Icon name="CheckmarkCircle01" size={20} className="text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">REIQ-approved cleaning checklist</span>
-                    </li>
                     <li className="flex items-start space-x-2">
                       <Icon name="CheckmarkCircle01" size={20} className="text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-sm text-muted-foreground">Free re-clean within 72 hours if needed</span>

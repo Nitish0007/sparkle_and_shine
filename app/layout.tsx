@@ -23,9 +23,8 @@ export const metadata: Metadata = {
     "bond cleaning",
     "exit cleaning",
     "carpet cleaning",
-    "house cleaning",
     "professional cleaning",
-    "Brisbane cleaning",
+    "Sydney cleaning",
   ],
   authors: [{ name: config.site.name }],
   openGraph: {
@@ -35,10 +34,23 @@ export const metadata: Metadata = {
     siteName: config.site.name,
     title: config.site.name,
     description: config.site.description,
+    images: [
+      {
+        url: "/assets/logo.png",
+        width: 160,
+        height: 160,
+        alt: config.site.name,
+      },
+    ],
   },
   robots: {
     index: true,
     follow: true,
+  },
+  icons: {
+    icon: "/assets/logo.png",
+    apple: "/assets/logo.png",
+    shortcut: "/assets/logo.png",
   },
 };
 
