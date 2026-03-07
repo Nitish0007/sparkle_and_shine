@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/ui/Icon";
-import { services, config } from "@/lib/data";
+import { services, config, images } from "@/lib/data";
 import { Hero } from "@/components/ui/Hero";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -34,7 +34,7 @@ const serviceDetails: Record<string, {
 }> = {
   "bond-cleaning": {
     longDescription: "Our comprehensive bond cleaning service is designed to help you get your full bond back. We understand the stress of moving out and the importance of meeting your landlord's or property manager's expectations. Our experienced team follows a detailed checklist to ensure every corner of your rental property is spotless and inspection-ready.",
-    imageUrl: "/assets/bond_cleaning.jpg",
+    imageUrl: images.bond_cleaning,
     whatWeClean: [
       "All rooms including bedrooms, living areas, and hallways",
       "Kitchen: appliances, cupboards, drawers, and benchtops",
@@ -78,7 +78,7 @@ const serviceDetails: Record<string, {
   },
   "exit-cleaning": {
     longDescription: "Moving out can be overwhelming, but our exit cleaning service makes it easy. We provide a complete deep clean that covers every surface, appliance, and corner of your property. Our goal is to leave your property looking brand new, ensuring a smooth handover process.",
-    imageUrl: "/assets/move_in_move_out.png",
+    imageUrl: images.vacate_cleaning,
     whatWeClean: [
       "Complete interior deep cleaning",
       "All appliances: oven, fridge, dishwasher, and more",
@@ -122,7 +122,7 @@ const serviceDetails: Record<string, {
   },
   "end-of-lease-cleaning": {
     longDescription: "End-of-lease cleaning requires attention to detail and meeting strict standards. Our professional team understands exactly what landlords and property managers look for during inspections. We ensure every surface, skirting board, and appliance meets the highest standards for a successful inspection.",
-    imageUrl: "/assets/vacate_cleaning.png",
+    imageUrl: images.vacate_cleaning,
     whatWeClean: [
       "All rooms: comprehensive deep cleaning",
       "Kitchen: appliances, cupboards, and surfaces",
@@ -166,7 +166,7 @@ const serviceDetails: Record<string, {
   },
   "move-in-move-out-cleaning": {
     longDescription: "Whether you're moving into a new home or leaving one behind, our move-in/move-out cleaning service ensures your property is perfectly sanitized and fresh. We make the transition smooth by handling all the cleaning, so you can focus on settling in or moving out.",
-    imageUrl: "/assets/move_in_move_out.png",
+    imageUrl: images.move_in_move_out,
     whatWeClean: [
       "Complete property sanitization",
       "All rooms: deep cleaning",
@@ -210,7 +210,7 @@ const serviceDetails: Record<string, {
   },
   "carpet-cleaning": {
     longDescription: "Revive your carpets with our professional steam carpet cleaning service. We use advanced steam cleaning technology to remove deep-seated dirt, stains, and allergens. Our service not only makes your carpets look brand new but also creates a healthier environment for your family.",
-    imageUrl: "/assets/carpet_cleaning.png",
+    imageUrl: images.carpet_cleaning,
     whatWeClean: [
       "Deep steam cleaning of all carpets",
       "Stain removal and treatment",
@@ -253,7 +253,7 @@ const serviceDetails: Record<string, {
   },
   "vacate-cleaning": {
     longDescription: "Moving out soon? Our vacate cleaning service guarantees a spotless finish, making your handover process simple and stress-free. We understand the importance of getting your bond back, and our comprehensive cleaning service ensures your property meets all inspection requirements.",
-    imageUrl: "/assets/vacate_cleaning.png",
+    imageUrl: images.vacate_cleaning,
     whatWeClean: [
       "Complete property clean",
       "All rooms: bedrooms, living areas, and more",
@@ -297,7 +297,7 @@ const serviceDetails: Record<string, {
   },
   "pest-control": {
     longDescription: "We provide safe and eco-friendly pest control treatments that effectively eliminate insects and rodents. Our service is ideal for end-of-lease requirements or regular maintenance. We use products that are safe for pets and children while being highly effective against pests.",
-    imageUrl: "/assets/pest_control.png",
+    imageUrl: images.pest_control,
     whatWeClean: [
       "Insect treatment and elimination",
       "Rodent control and prevention",
@@ -349,7 +349,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: ServiceDetailPageProps) {
   const resolvedParams = await params;
   const service = services.services.find((s) => s.id === resolvedParams.id);
-  
+
   if (!service) {
     return {
       title: "Service Not Found",
@@ -390,6 +390,8 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
               alt={service.title}
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+              quality={75}
               priority
             />
           </div>

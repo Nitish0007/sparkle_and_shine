@@ -4,7 +4,7 @@ import { Hero } from "@/components/ui/Hero";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { FeatureCard } from "@/components/ui/FeatureCard";
 import { Button } from "@/components/ui/button";
-import { config, services } from "@/lib/data";
+import { config, services, images } from "@/lib/data";
 import { Icon } from "@/components/ui/Icon";
 
 export default function HomePage() {
@@ -29,10 +29,12 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="relative w-full h-[450px] md:h-[700px] rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/assets/home_page_image.jpg"
+              src={images.home_page_image}
               alt="Professional cleaning services"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+              quality={75}
               priority
             />
           </div>

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { config } from "@/lib/data";
+import { config, images } from "@/lib/data";
 import { Icon } from "@/components/ui/Icon";
 import { saveContactSubmission } from "@/lib/form-submissions";
 
@@ -37,9 +37,9 @@ export default function ContactPage() {
 
     try {
       saveContactSubmission(formData);
-      
+
       await new Promise((resolve) => setTimeout(resolve, 1000));
-      
+
       setSubmitStatus("success");
       setFormData({
         name: "",
@@ -67,10 +67,12 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="relative w-full h-[450px] md:h-[600px] rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/assets/vacate_cleaning.png"
+              src={images.contact_us}
               alt="Contact us - Professional cleaning services"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+              quality={75}
               priority
             />
           </div>
