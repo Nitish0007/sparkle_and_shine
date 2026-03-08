@@ -5,8 +5,8 @@ import { config, images } from "@/lib/data";
 import { Icon } from "@/components/ui/Icon";
 
 export const metadata = {
-  title: "About Us | Sparkle & Shine",
-  description: "Learn about Sparkle & Shine - professional cleaning services with skilled, trusted cleaners.",
+  title: "About US | Sparkle & Shine Professional Cleaners",
+  description: "Discover why Sparkle & Shine is the leading choice for professional cleaning services in Sydney, Australia. Trusted, vetted, and committed to excellence.",
 };
 
 export default function AboutPage() {

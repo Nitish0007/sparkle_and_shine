@@ -340,6 +340,8 @@ const serviceDetails: Record<string, {
   }
 };
 
+import { getBreadcrumbSchema } from "@/lib/schema";
+
 export async function generateStaticParams() {
   return services.services.map((service) => ({
     id: service.id,
@@ -357,8 +359,11 @@ export async function generateMetadata({ params }: ServiceDetailPageProps) {
   }
 
   return {
-    title: `${service.title} | ${config.site.name}`,
-    description: service.description,
+    title: `${service.title} Services in Sydney, Australia`,
+    description: `Expert ${service.title} in Sydney, Australia. ${service.description} Book our professional team for guaranteed results.`,
+    alternates: {
+      canonical: `/services/${service.id}`,
+    },
   };
 }
 
@@ -371,10 +376,20 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
     notFound();
   }
 
+  const breadcrumbSchema = getBreadcrumbSchema([
+    { name: "Home", item: "https://sparkleandshinecleaningsydney.au" },
+    { name: "Services", item: "https://sparkleandshinecleaningsydney.au/services" },
+    { name: service.title, item: `https://sparkleandshinecleaningsydney.au/services/${service.id}` },
+  ]);
+
   const iconName = iconMap[service.icon] || "Sparkle01";
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Hero
         title={service.title}
         description={service.description}

@@ -6,6 +6,17 @@ import { FeatureCard } from "@/components/ui/FeatureCard";
 import { Button } from "@/components/ui/button";
 import { config, services, images } from "@/lib/data";
 import { Icon } from "@/components/ui/Icon";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Professional Cleaning Services in Sydney, Australia | Sparkle & Shine",
+  description: "Top-rated cleaning services in Sydney, Australia. Sparkle & Shine provides expert bond cleaning, carpet cleaning, and end-of-lease cleaning. Get a free quote now!",
+  keywords: ["cleaning services Australia", "cleaning services Sydney", "bond cleaning Sydney", "Sparkle & Shine", "professional cleaners"],
+  openGraph: {
+    title: "Expert Cleaning Services in Sydney | Sparkle & Shine",
+    description: "Book our professional cleaners in Sydney for a spotless home. Bond back guarantee and satisfaction assured.",
+  }
+};
 
 export default function HomePage() {
   const featuredServices = services.services.slice(0, 6);
@@ -15,8 +26,8 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <Hero
-        title="Professional Cleaning Services You Can Trust"
-        description="Have you thought about hiring professional cleaners to keep your home spotless? We offer hassle-free cleaning services with a bond return guarantee."
+        title="Professional Cleaning Services Sydney, Australia"
+        description="Sparkle & Shine offers top-tier cleaning services in Sydney, Australia. Whether it's bond cleaning or regular maintenance, our expert team ensures your home is spotless."
         ctaText="Get a Free Quote"
         ctaLink="/get-a-quote"
         showSecondaryCta={true}
