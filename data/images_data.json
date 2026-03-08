@@ -1,5 +1,5 @@
 {
-  "images": {
+  "images_url": {
     "logo": "/assets/logo.png",
     "about_us": "https://xxcesvcrhmuytwwa.public.blob.vercel-storage.com/prod/about_us.jpg",
     "home_page_image": "https://xxcesvcrhmuytwwa.public.blob.vercel-storage.com/prod/home_page_image.jpg",
@@ -9,5 +9,16 @@
     "move_in_move_out": "https://xxcesvcrhmuytwwa.public.blob.vercel-storage.com/prod/move_in_move_out.png",
     "pest_control": "https://xxcesvcrhmuytwwa.public.blob.vercel-storage.com/prod/pest_control.png",
     "vacate_cleaning": "https://xxcesvcrhmuytwwa.public.blob.vercel-storage.com/prod/vacate_cleaning.png"
+  },
+  "images_assets": {
+    "logo": "/assets/logo.png",
+    "about_us": "/assets/about_us.jpg",
+    "home_page_image": "/assets/home_page_image.jpg",
+    "bond_cleaning": "/assets/bond_cleaning.jpg",
+    "carpet_cleaning": "/assets/carpet_cleaning.png",
+    "contact_us": "/assets/contact_us.png",
+    "move_in_move_out": "/assets/move_in_move_out.png",
+    "pest_control": "/assets/pest_control.png",
+    "vacate_cleaning": "/assets/vacate_cleaning.png"
   }
 }
