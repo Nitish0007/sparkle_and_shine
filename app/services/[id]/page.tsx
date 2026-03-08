@@ -359,8 +359,8 @@ export async function generateMetadata({ params }: ServiceDetailPageProps) {
   }
 
   return {
-    title: `${service.title} Services in Sydney & Australia`,
-    description: `Expert ${service.title} in Sydney and Australia. ${service.description} Book our professional team for guaranteed results.`,
+    title: `${service.title} Services in Sydney, Australia`,
+    description: `Expert ${service.title} in Sydney, Australia. ${service.description} Book our professional team for guaranteed results.`,
     alternates: {
       canonical: `/services/${service.id}`,
     },
