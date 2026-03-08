@@ -20,6 +20,7 @@ export interface QuoteSubmission {
   name: string;
   email: string;
   phone: string;
+  address: string;
   service: string;
   propertyType: string;
   bedrooms: string;

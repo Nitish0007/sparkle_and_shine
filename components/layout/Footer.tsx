@@ -2,19 +2,19 @@ import Link from "next/link";
 import { config } from "@/lib/data";
 import { SocialLinks } from "./SocialLinks";
 import { Icon } from "@/components/ui/Icon";
+import Image from "next/image";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const serviceLinks = [
-    { href: "/services#bond-cleaning", label: "Bond Cleaning" },
-    { href: "/services#exit-cleaning", label: "Exit Cleaning" },
-    { href: "/services#end-of-lease-cleaning", label: "End-of-Lease Cleaning" },
-    { href: "/services#move-in-move-out-cleaning", label: "Move-In/Move-Out Cleaning" },
-    { href: "/services#carpet-cleaning", label: "Carpet Cleaning" },
-    { href: "/services#house-regular-cleaning", label: "House and Regular Cleaning" },
-    { href: "/services#vacate-cleaning", label: "Vacate Cleaning" },
-    { href: "/services#pest-control", label: "Pest Control" },
+    { href: "/services/bond-cleaning/", label: "Bond Cleaning" },
+    { href: "/services/exit-cleaning/", label: "Exit Cleaning" },
+    { href: "/services/end-of-lease-cleaning/", label: "End-of-Lease Cleaning" },
+    { href: "/services/move-in-move-out-cleaning/", label: "Move-In/Move-Out Cleaning" },
+    { href: "/services/carpet-cleaning/", label: "Carpet Cleaning" },
+    { href: "/services/vacate-cleaning/", label: "Vacate Cleaning" },
+    { href: "/services/pest-control/", label: "Pest Control" },
   ];
 
   return (
@@ -23,11 +23,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <Link href="/" className="flex items-center space-x-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                <Icon name="Sparkle01" size={24} />
-              </div>
-              <span className="text-xl font-bold">{config.site.name}</span>
+            <Link href="/" className="flex items-center space-x-3 mb-4">
+              <Image src="/assets/logo.png" alt={config.site.name} width={160} height={160} className="h-14 w-auto max-h-16 object-contain" />
+              <span className="text-xl font-semibold text-foreground hidden sm:block">{config.site.name}</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-4">
               {config.site.description}

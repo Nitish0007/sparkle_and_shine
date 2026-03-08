@@ -47,7 +47,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
       </CardContent>
       <CardFooter>
         <Button asChild variant="outline" className="w-full">
-          <Link href={`/services#${service.id}`}>Learn More</Link>
+          <Link href={`/services/${service.id}/`}>Learn More</Link>
         </Button>
       </CardFooter>
     </Card>

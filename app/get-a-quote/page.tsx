@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Hero } from "@/components/ui/Hero";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -17,6 +18,7 @@ export default function GetAQuotePage() {
     name: "",
     email: "",
     phone: "",
+    address: "",
     service: "",
     propertyType: "",
     bedrooms: "",
@@ -54,6 +56,7 @@ export default function GetAQuotePage() {
         name: "",
         email: "",
         phone: "",
+        address: "",
         service: "",
         propertyType: "",
         bedrooms: "",
@@ -74,6 +77,21 @@ export default function GetAQuotePage() {
         description="Fill out the form below and we'll get back to you with a personalized quote for your cleaning needs."
         hideButtons={true}
       />
+
+      {/* Quote Image */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="relative w-full h-[450px] md:h-[600px] rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/assets/contact_us.png"
+              alt="Get a free quote - Professional cleaning services"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </section>
 
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -124,6 +142,19 @@ export default function GetAQuotePage() {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+61 400 000 000"
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="address">Property Address *</Label>
+                    <Input
+                      id="address"
+                      name="address"
+                      type="text"
+                      required
+                      value={formData.address}
+                      onChange={handleChange}
+                      placeholder="Street address, Suburb, State, Postcode"
                     />
                   </div>
 

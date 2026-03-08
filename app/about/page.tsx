@@ -1,6 +1,7 @@
+import Image from "next/image";
 import { Hero } from "@/components/ui/Hero";
 import { FeatureCard } from "@/components/ui/FeatureCard";
-import { config } from "@/lib/data";
+import { config, images } from "@/lib/data";
 import { Icon } from "@/components/ui/Icon";
 
 export const metadata = {
@@ -16,6 +17,23 @@ export default function AboutPage() {
         description="Professional cleaning services you can trust. We're committed to delivering spotless results with precision and professionalism."
       />
 
+      {/* About Image */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="relative w-full h-[450px] md:h-[600px] rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src={images.about_us}
+              alt="About Sparkle & Shine - Professional cleaning team"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+              quality={75}
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Mission Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -24,17 +42,13 @@ export default function AboutPage() {
               Our Mission
             </h2>
             <p className="text-lg text-muted-foreground mb-4">
-              At {config.site.name}, we believe that a clean space is essential for a healthy and happy life. 
-              Our mission is to provide exceptional cleaning services that exceed your expectations, 
+              At {config.site.name}, we believe that a clean space is essential for a healthy and happy life.
+              Our mission is to provide exceptional cleaning services that exceed your expectations,
               making your life easier and your spaces spotless.
             </p>
-            <p className="text-lg text-muted-foreground mb-4">
-              Whether you're moving out of a rental property, need regular house cleaning, or require 
-              specialized services like carpet cleaning or pest control, we've got you covered.
-            </p>
             <p className="text-lg text-muted-foreground">
-              We pride ourselves on our attention to detail, use of eco-friendly products, and commitment 
-              to customer satisfaction. Every member of our team is trained, insured, and background-checked 
+              We pride ourselves on our attention to detail, use of eco-friendly products, and commitment
+              to customer satisfaction. Every member of our team is trained, insured, and background-checked
               to ensure your peace of mind.
             </p>
           </div>

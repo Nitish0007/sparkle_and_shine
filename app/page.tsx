@@ -1,9 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Hero } from "@/components/ui/Hero";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { FeatureCard } from "@/components/ui/FeatureCard";
 import { Button } from "@/components/ui/button";
-import { config, services } from "@/lib/data";
+import { config, services, images } from "@/lib/data";
 import { Icon } from "@/components/ui/Icon";
 
 export default function HomePage() {
@@ -22,6 +23,23 @@ export default function HomePage() {
         secondaryCtaText="View Services"
         secondaryCtaLink="/services"
       />
+
+      {/* Home Image Section */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="relative w-full h-[450px] md:h-[700px] rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src={images.home_page_image}
+              alt="Professional cleaning services"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+              quality={75}
+              priority
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-muted/50">
@@ -74,7 +92,7 @@ export default function HomePage() {
               Areas We Serve
             </h2>
             <p className="text-xl text-muted-foreground">
-              We proudly serve all suburbs across the Brisbane region
+              We proudly serve all suburbs across the Sydney region
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
