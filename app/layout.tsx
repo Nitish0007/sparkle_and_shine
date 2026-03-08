@@ -41,6 +41,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/assets/logo.png",
+    apple: "/assets/logo.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_AU",
@@ -73,11 +77,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  icons: {
-    icon: "/assets/logo.png",
-    apple: "/assets/logo.png",
-    shortcut: "/assets/logo.png",
   },
 };
 

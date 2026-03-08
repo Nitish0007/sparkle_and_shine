@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { services, config } from "@/lib/data";
 import { Icon } from "@/components/ui/Icon";
-import { saveQuoteSubmission } from "@/lib/form-submissions";
+import { useToast } from "@/components/ui/Toast";
 
 export default function GetAQuotePage() {
   const [formData, setFormData] = useState({
@@ -38,19 +38,23 @@ export default function GetAQuotePage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const { showToast, ToastContainer } = useToast();
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
-    // Store form data in localStorage for now (static site)
-    // In a real app, this would be sent to a server
     try {
-      saveQuoteSubmission(formData);
-      
-      // Simulate API call delay
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
+      const response = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) throw new Error("Failed to submit");
+
+      showToast("Thank you! Our team will reach out to you within one hour.", "success");
       setSubmitStatus("success");
       setFormData({
         name: "",
@@ -65,6 +69,7 @@ export default function GetAQuotePage() {
       });
     } catch (error) {
       setSubmitStatus("error");
+      showToast("Something went wrong. Please try again or contact us directly.", "error");
     } finally {
       setIsSubmitting(false);
     }
@@ -231,6 +236,7 @@ export default function GetAQuotePage() {
                         <SelectValue placeholder="Select bathrooms" />
                       </SelectTrigger>
                       <SelectContent>
+                        <SelectItem value="0">0 Bathrooms</SelectItem>
                         <SelectItem value="1">1 Bathroom</SelectItem>
                         <SelectItem value="2">2 Bathrooms</SelectItem>
                         <SelectItem value="3">3 Bathrooms</SelectItem>
@@ -324,6 +330,7 @@ export default function GetAQuotePage() {
           </div>
         </div>
       </section>
+      <ToastContainer />
     </>
   );
 }
