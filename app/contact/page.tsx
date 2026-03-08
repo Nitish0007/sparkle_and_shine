@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { config, images } from "@/lib/data";
 import { Icon } from "@/components/ui/Icon";
-import { saveContactSubmission } from "@/lib/form-submissions";
+import { useToast } from "@/components/ui/Toast";
 
 
 export default function ContactPage() {
@@ -30,16 +30,23 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const { showToast, ToastContainer } = useToast();
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
     try {
-      saveContactSubmission(formData);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      if (!response.ok) throw new Error("Failed to submit");
 
+      showToast("Thank you! Our team will reach out to you within one hour.", "success");
       setSubmitStatus("success");
       setFormData({
         name: "",
@@ -50,6 +57,7 @@ export default function ContactPage() {
       });
     } catch (error) {
       setSubmitStatus("error");
+      showToast("Something went wrong. Please try again or contact us directly.", "error");
     } finally {
       setIsSubmitting(false);
     }
@@ -269,6 +277,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+      <ToastContainer />
     </>
   );
 }
