@@ -4,8 +4,8 @@ import { Hero } from "@/components/ui/Hero";
 import { services } from "@/lib/data";
 
 export const metadata = {
-  title: "Services | Sparkle & Shine",
-  description: "Comprehensive cleaning services including bond cleaning, exit cleaning, carpet cleaning, and more.",
+  title: "Cleaning Services in Sydney, Australia | Sparkle & Shine",
+  description: "Explore our wide range of professional cleaning services in Sydney, Australia, including bond cleaning, carpet cleaning, vacate cleaning, and pest control.",
 };
 
 export default function ServicesPage() {
