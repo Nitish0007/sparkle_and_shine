@@ -9,6 +9,7 @@ interface SocialLinksProps {
 
 const iconMap: Record<string, string> = {
   facebook: "Facebook01",
+  fbpage: "Facebook02",
   instagram: "Instagram01",
   twitter: "Twitter01",
   youtube: "Youtube01",
@@ -28,6 +29,7 @@ export function SocialLinks({ links, className = "" }: SocialLinksProps) {
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
             aria-label={link.name}
+            title={link.name}
           >
             <Icon name={iconName} size={24} />
           </Link>

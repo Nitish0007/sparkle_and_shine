@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 interface HeroProps {
   title: string;
-  description: string;
+  description?: string;
   ctaText?: string;
   ctaLink?: string;
   showSecondaryCta?: boolean;
@@ -23,15 +23,17 @@ export function Hero({
   hideButtons = false,
 }: HeroProps) {
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-b from-primary/10 via-background to-background">
+    <section className="relative pt-20 pb-10 md:pt-32 md:pb-16 bg-gradient-to-b from-primary/10 via-background to-background">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             {title}
           </h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            {description}
-          </p>
+          {description && (
+            <p className="text-xl text-muted-foreground mb-8">
+              {description}
+            </p>
+          )}
           {!hideButtons && (
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">

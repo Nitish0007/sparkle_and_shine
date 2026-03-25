@@ -79,26 +79,10 @@ export default function GetAQuotePage() {
     <>
       <Hero
         title="Get a Free Quote"
-        description="Fill out the form below and we'll get back to you with a personalized quote for your cleaning needs."
         hideButtons={true}
       />
 
-      {/* Quote Image */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="relative w-full h-[450px] md:h-[600px] rounded-2xl overflow-hidden shadow-lg">
-            <Image
-              src="/assets/contact_us.png"
-              alt="Get a free quote - Professional cleaning services"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
+      <section className="pb-20 pt-8 md:pt-12">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <Card>
@@ -327,6 +311,21 @@ export default function GetAQuotePage() {
                 </CardContent>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quote Image */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="relative w-full h-[450px] md:h-[600px] rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/assets/contact_us.png"
+              alt="Get a free quote - Professional cleaning services"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
