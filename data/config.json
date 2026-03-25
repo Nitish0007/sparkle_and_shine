@@ -11,24 +11,14 @@
   },
   "socialMedia": [
     {
-      "name": "Facebook",
-      "url": "https://facebook.com/sparkleandshine",
+      "name": "Facebook Account",
+      "url": "https://www.facebook.com/profile.php?id=61580736366835",
       "icon": "facebook"
     },
     {
-      "name": "Instagram",
-      "url": "https://instagram.com/sparkleandshine",
-      "icon": "instagram"
-    },
-    {
-      "name": "Twitter",
-      "url": "https://twitter.com/sparkleandshine",
-      "icon": "twitter"
-    },
-    {
-      "name": "YouTube",
-      "url": "https://youtube.com/sparkleandshine",
-      "icon": "youtube"
+      "name": "Facebook Page",
+      "url": "https://www.facebook.com/profile.php?id=61584681301692",
+      "icon": "fbpage"
     }
   ],
   "features": [

@@ -22,6 +22,7 @@ import {
   ToolsIcon,
   CalendarCheckInIcon,
   FacebookIcon,
+  Facebook02Icon,
   InstagramIcon,
   TwitterIcon,
   YoutubeIcon,
@@ -43,7 +44,7 @@ const iconMap: Record<string, any> = {
   "Close01": Cancel01Icon,
   "CheckmarkCircle01": CheckCircle,
   "AlertCircle01": Cancel01Icon, // Using Cancel01Icon as alert/error icon
-  
+
   // Service icons
   "ShieldCheck01": ShieldCheck,
   "Door01": DoorIcon,
@@ -52,25 +53,26 @@ const iconMap: Record<string, any> = {
   "Home01": HomeIcon,
   "HomeCheck01": PhoneCheckIcon, // Using PhoneCheckIcon as fallback
   "Bug01": BugIcon,
-  
+
   // Feature icons
   "UsersCheck01": UserCheckIcon,
   "DollarCircle01": DollarCircleIcon,
   "Tools01": ToolsIcon,
   "CalendarCheck01": CalendarCheckInIcon,
-  
+
   // Social media icons
   "Facebook01": FacebookIcon,
+  "Facebook02": Facebook02Icon,
   "Instagram01": InstagramIcon,
   "Twitter01": TwitterIcon,
   "Youtube01": YoutubeIcon,
   "Linkedin01": LinkedinIcon,
   "Share01": ShareIcon,
-  
+
   // Other icons
   "Heart01": HatIcon, // Using HatIcon as fallback (HeartIcon doesn't exist)
   "Leaf01": LeafIcon,
-  
+
   // Carpet icon fallback
   "Carpet01": HomeIcon, // Fallback since Carpet01 might not exist
 };
@@ -84,12 +86,12 @@ interface IconProps {
 
 export function Icon({ name, size = 24, className = "", strokeWidth = 2 }: IconProps) {
   const IconComponent = iconMap[name];
-  
+
   if (!IconComponent) {
     console.warn(`Icon "${name}" not found in iconMap`);
     return <span className={className}>⚠</span>;
   }
-  
+
   return (
     <HugeiconsIcon
       icon={IconComponent}
