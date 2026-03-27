@@ -35,12 +35,12 @@ export function Hero({
             </p>
           )}
           {!hideButtons && (
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
+            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+              <Button asChild className="h-14 px-8 text-lg font-bold shadow-xl shadow-primary/20 animate-breath hover:animate-none hover:scale-[1.02] active:scale-[0.98] transition-all duration-200">
                 <Link href={ctaLink}>{ctaText}</Link>
               </Button>
               {showSecondaryCta && secondaryCtaText && secondaryCtaLink && (
-                <Button asChild size="lg" variant="outline">
+                <Button asChild variant="outline" className="h-12 px-6 text-base font-semibold border-2 hover:bg-primary/5 transition-colors duration-200">
                   <Link href={secondaryCtaLink}>{secondaryCtaText}</Link>
                 </Button>
               )}
