@@ -24,7 +24,7 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <Link href="/" className="flex items-center space-x-3 mb-4">
-              <Image src="/assets/logo.png" alt={config.site.name} width={160} height={160} className="h-14 w-auto max-h-16 object-contain" />
+              <Image src="/assets/logo.png" alt={config.site.name} width={240} height={240} className="h-20 w-auto max-h-24 object-contain" />
               <span className="text-xl font-semibold text-foreground hidden sm:block">{config.site.name}</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-4">

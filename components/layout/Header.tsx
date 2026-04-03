@@ -24,8 +24,8 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <Image src={images.logo} alt={config.site.name} width={160} height={160} className="h-14 w-auto max-h-16 object-contain" />
-            <span className="text-xl font-semibold text-foreground hidden sm:block">{config.site.name}</span>
+            <Image src={images.logo} alt={config.site.name} width={240} height={240} className="h-16 w-auto object-contain scale-[1.2] origin-left ml-2" />
+            <span className="text-xl font-semibold text-foreground hidden sm:block ml-4">{config.site.name}</span>
           </Link>
 
           {/* Desktop Navigation */}
