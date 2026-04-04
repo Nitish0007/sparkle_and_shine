@@ -202,6 +202,16 @@ export default function ContactPage() {
                 <CardContent className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0">
+                      <Icon name="Sparkle01" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-1">Business Name</h3>
+                      <p className="text-muted-foreground">{config.site.business_name}</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary flex-shrink-0">
                       <Icon name="Location01" size={24} />
                     </div>
                     <div>
